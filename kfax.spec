@@ -29,7 +29,7 @@ A program to display raw and tiffed fax images (g3, g3-2d, g4).
 #--------------------------------------------------------------------
 
 %prep
-%setup -q -n %name-%version-kde4.0.4
+%setup -q -n %name-%version-kde4.3.1
 
 %build
 %cmake_kde4
