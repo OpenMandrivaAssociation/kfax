@@ -1,8 +1,9 @@
 Summary:	A fax viewing program
 Name:		kfax
 Version: 	3.3.6
-Release: 	%mkrel 8
+Release: 	7
 Source0: 	http://fr2.rpmfind.net/linux/KDE/stable/4.0.4/src/extragear/%name-%version-kde4.3.1.tar.bz2
+Patch0:		kfax-3.3.6-kde4.3.1-x11.patch
 License: 	GPLv2+
 Group: 		Graphics
 Url: 		http://www.kde.org
@@ -20,7 +21,7 @@ Conflicts:	kde-l10n < 3.5.9-5
 A program to display raw and tiffed fax images (g3, g3-2d, g4).
 
 %files -f %name.lang
-%defattr(-,root,root)
+%doc COPYING ChangeLog README
 %_kde_bindir/*
 %_kde_datadir/applications/kde4/*.desktop
 %_kde_appsdir/%name
@@ -30,18 +31,18 @@ A program to display raw and tiffed fax images (g3, g3-2d, g4).
 
 %prep
 %setup -q -n %name-%version-kde4.3.1
+%patch0 -p1
 
 %build
+
 %cmake_kde4
 %make
 
 %install
-rm -rf %{buildroot}
 cd build
 %{makeinstall_std}
 cd -
 
 %find_lang %name --with-html
 
-%clean
-rm -rf %{buildroot}
+
