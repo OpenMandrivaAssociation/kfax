@@ -1,7 +1,7 @@
 Summary:	A fax viewing program
 Name:		kfax
 Version: 	3.3.6
-Release: 	7
+Release: 	8
 Source0: 	http://fr2.rpmfind.net/linux/KDE/stable/4.0.4/src/extragear/%name-%version-kde4.3.1.tar.bz2
 Patch0:		kfax-3.3.6-kde4.3.1-x11.patch
 License: 	GPLv2+
