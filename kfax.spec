@@ -6,7 +6,7 @@ Source0: 	http://fr2.rpmfind.net/linux/KDE/stable/4.0.4/src/extragear/%name-%ver
 Patch0:		kfax-3.3.6-kde4.3.1-x11.patch
 License: 	GPLv2+
 Group: 		Graphics
-Url: 		http://www.kde.org
+Url: 		https://www.kde.org
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: 	kdelibs4-devel
 %if %mdkversion >= 200910
