@@ -8,6 +8,7 @@ License: 	GPLv2+
 Group: 		Graphics
 Url: 		https://www.kde.org
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRequires:	make
 BuildRequires: 	kdelibs4-devel
 %if %mdkversion >= 200910
 Obsoletes:	kdegraphics-kfax < 1:3.5.10-3
